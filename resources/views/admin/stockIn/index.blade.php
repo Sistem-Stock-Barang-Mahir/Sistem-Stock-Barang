@@ -26,24 +26,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                @foreach ($stocks as $stock)
+                                    <th scope="row">{{$stock->id}}</th>
+                                    <td>{{$stock->id_items}}</td>
+                                    <td>{{$stock->id_supplier->name}}</td>
+                                    <td>{{$stock->quantity}}</td>
+                                    <td>{{$stock->updated_at}}</td>
+                                @endforeach
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
                         </tbody>
                     </table>
                 </div>

@@ -16,7 +16,8 @@ class StockInController extends Controller
      */
     public function index()
     {
-        return view('admin.stockIn.index');
+        $stocks = StockIn::all();
+        return view('admin.stockIn.index', compact('stocks'));
     }
 
     /**
@@ -57,7 +58,7 @@ class StockInController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

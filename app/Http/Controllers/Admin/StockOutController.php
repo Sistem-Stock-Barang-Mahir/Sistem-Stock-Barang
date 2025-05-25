@@ -15,8 +15,8 @@ class StockOutController extends Controller
      */
     public function index()
     {
-        return view('admin.stockOut.index');
-        
+        $stocks = StockOut::all();
+        return view('admin.stockOut.index', compact('stocks'));
     }
 
     /**
